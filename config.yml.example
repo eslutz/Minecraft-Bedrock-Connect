@@ -1,0 +1,45 @@
+# BedrockConnect Configuration File
+# All settings are optional and will use defaults if not specified
+# You can also use environment variables with BC_ prefix instead
+
+# Server Settings
+port: 19132
+bind_ip: 0.0.0.0
+server_limit: 100
+
+# Feature Toggles
+user_servers: true
+featured_servers: true
+fetch_featured_ips: true
+kick_inactive: true
+store_display_names: true
+online_mode: true
+
+# Debug Mode
+debug: false
+
+# Custom Servers Configuration
+# custom_servers: /app/custom_servers.json
+
+# Language Configuration
+# language: /app/language.json
+
+# Message of the Day (MOTD)
+# motd_file: /app/motd.txt
+# motd_first_join: true
+# motd_cooldown: 0
+
+# Rate Limiting
+packet_limit: 200
+# global_packet_limit: 100000
+
+# Database Configuration (optional - local JSON files used by default)
+# db_type: none  # Options: none, mysql, mariadb, postgres
+# db_host: localhost
+# db_db: bedrock-connect
+# db_user: root
+# db_pass: password
+# db_autoreconnect: false
+
+# Whitelist (optional)
+# whitelist: /app/whitelist.json

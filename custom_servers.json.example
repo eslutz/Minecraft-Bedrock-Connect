@@ -1,0 +1,36 @@
+{
+  "servers": [
+    {
+      "name": "Example Server",
+      "iconUrl": "https://i.imgur.com/3BmFZRE.png",
+      "address": "play.example.net",
+      "port": 19132
+    },
+    {
+      "name": "Another Server",
+      "iconUrl": "https://i.imgur.com/3BmFZRE.png",
+      "address": "mc.anotherserver.com",
+      "port": 19133
+    }
+  ],
+  "groups": [
+    {
+      "name": "Popular Servers",
+      "iconUrl": "https://i.imgur.com/3BmFZRE.png",
+      "content": [
+        {
+          "name": "The Hive",
+          "iconUrl": "https://i.imgur.com/3BmFZRE.png",
+          "address": "geo.hivebedrock.network",
+          "port": 19132
+        },
+        {
+          "name": "CubeCraft",
+          "iconUrl": "https://i.imgur.com/3BmFZRE.png",
+          "address": "mco.cubecraft.net",
+          "port": 19132
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,46 @@
+# Environment files
+.env
+
+# Data directories
+data/
+players/
+
+# Configuration files (keep examples)
+config.yml
+custom_servers.json
+language.json
+whitelist.json
+motd.txt
+featured_server_ips.json
+bc_dns.conf
+
+# Docker volumes
+volumes/
+
+# Logs
+*.log
+logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+*.bak
+
+# Build artifacts
+*.jar
+target/
+build/
+dist/
