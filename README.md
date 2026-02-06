@@ -4,7 +4,7 @@ This repository contains a containerized setup for running [BedrockConnect](http
 
 ## What is BedrockConnect?
 
-BedrockConnect is a serverlist software that allows Minecraft Bedrock Edition players (Xbox, PlayStation, Nintendo Switch) to connect to any server IP. It provides an in-game server list interface where players can add, manage, and connect to their favorite servers.
+BedrockConnect is a serverlist software that allows Minecraft Bedrock Edition players (Nintendo Switch, Xbox, PlayStation) to connect to any server IP. It provides an in-game server list interface where players can add, manage, and connect to their favorite servers.
 
 ## Prerequisites
 
@@ -61,7 +61,7 @@ sudo reboot
    ```
 
 5. **Configure your game console:**
-   - On your Xbox, PlayStation, or Nintendo Switch, set the DNS to your Raspberry Pi's IP address
+   - On your Nintendo Switch, Xbox, or PlayStation, set the DNS to your Raspberry Pi's IP address
    - Open Minecraft and connect through a Featured Server entry
 
 ## Configuration
@@ -131,31 +131,6 @@ To pre-configure servers for your players:
      - BC_CUSTOM_SERVERS=/app/custom_servers.json
    ```
 
-## Useful Commands
-
-```bash
-# Start the container
-docker-compose up -d
-
-# Stop the container
-docker-compose down
-
-# View logs
-docker-compose logs -f
-
-# Restart the container
-docker-compose restart
-
-# Rebuild after changes
-docker-compose up -d --build
-
-# Check container status
-docker-compose ps
-
-# Access container shell (for debugging)
-docker-compose exec bedrock-connect sh
-```
-
 ## Troubleshooting
 
 ### Container won't start
@@ -176,40 +151,6 @@ docker-compose exec bedrock-connect sh
 - Check firewall rules: `sudo ufw status`
 - Ensure port 19132/UDP is forwarded on your router
 - Verify the Raspberry Pi's IP address hasn't changed
-
-### Finding your Raspberry Pi's IP address
-
-```bash
-hostname -I
-```
-
-## Performance Tips
-
-1. **Use a Raspberry Pi 4** with at least 2GB RAM for best performance
-2. **Use an SSD** instead of SD card for better I/O performance
-3. **Monitor resources:**
-
-   ```bash
-   # CPU and memory usage
-   docker stats bedrock-connect
-
-   # System resources
-   htop
-   ```
-
-4. **Limit concurrent connections** by adjusting `BC_SERVER_LIMIT`
-
-## Updating
-
-To update to the latest version of BedrockConnect:
-
-```bash
-docker-compose down
-docker-compose pull
-docker-compose up -d --build
-```
-
-The Dockerfile automatically downloads the latest release from GitHub.
 
 ## Additional Resources
 
