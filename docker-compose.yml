@@ -1,9 +1,7 @@
 services:
   bedrock-connect:
     container_name: bedrock-connect
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: ghcr.io/eslutz/minecraft-bedrock-connect:latest
     ports:
       # UDP port for Minecraft Bedrock connections
       - "19132:19132/udp"
@@ -12,10 +10,10 @@ services:
       - ./data/players:/app/players
       # Optional: mount custom configuration
       # Uncomment the line below if you want to use a config file
-      # - ./config.yml:/app/config.yml:ro
+      - ./config.yml:/app/config.yml:ro
       # Optional: mount custom servers configuration
       # Uncomment the line below if you want to use custom servers
-      # - ./custom_servers.json:/app/custom_servers.json:ro
+      - ./custom_servers.json:/app/custom_servers.json:ro
     environment:
       # Configuration via environment variables (prefix with BC_)
       # Examples:
